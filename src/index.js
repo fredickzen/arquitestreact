@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "antd/dist/antd.css";
+import { ConfigProvider } from "antd";
+import es from "antd/lib/locale/es_ES";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ConfigProvider locale={es}>
+      <App />
+    </ConfigProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
