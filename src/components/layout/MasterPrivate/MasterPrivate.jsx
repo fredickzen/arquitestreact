@@ -1,6 +1,7 @@
 import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import BannerSeguros from "./features/BannerSeguros";
 
 const MasterPrivate = ({ children }) => {
 
@@ -14,6 +15,7 @@ const MasterPrivate = ({ children }) => {
 
     return (
         <div>
+            <BannerSeguros/>
             <Navbar bg="primary" variant="dark">
                 <Navbar.Brand href="/">Navbar</Navbar.Brand>
                 <Nav className="mr-auto">

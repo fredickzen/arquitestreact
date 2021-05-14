@@ -13,10 +13,10 @@ const Home = () => {
     const [state, dispatch] = useReducer(HomeReducer, HomeReducerInitialValue);
 
     const submit = () => {
-        dispatch({type: "loading"})
+        dispatch({ type: "loading" });
         setTimeout(() => {
-            const result = form.getValues()
-            dispatch({type: "saved", payload: result})
+            const result = form.getValues();
+            dispatch({ type: "saved", payload: result });
         }, 3000);
     };
     return (
@@ -24,7 +24,12 @@ const Home = () => {
             <h2>Formulario</h2>
             <div className="card">
                 <div className="card-body">
-                    <Form className="row" form={form} onSubmit={submit} saving={state.loading}>
+                    <Form
+                        className="row"
+                        form={form}
+                        onSubmit={submit}
+                        saving={state.loading}
+                    >
                         <InputText
                             contClassName="col-6"
                             name="nombre"
@@ -43,7 +48,12 @@ const Home = () => {
             <hr />
             <div className="card">
                 <div className="card-body">
-                    <Form className="row" form={form} onSubmit={submit} saving={state.loading}>
+                    <Form
+                        className="row"
+                        form={form}
+                        onSubmit={submit}
+                        saving={state.loading}
+                    >
                         <InputText
                             contClassName="col-6"
                             name="nombre2"
@@ -62,7 +72,12 @@ const Home = () => {
             <hr />
             <div className="card">
                 <div className="card-body">
-                    <Form className="row" form={form} onSubmit={submit} saving={state.loading}>
+                    <Form
+                        className="row"
+                        form={form}
+                        onSubmit={submit}
+                        saving={state.loading}
+                    >
                         <InputEmail
                             contClassName="col-6"
                             name="email"
@@ -73,6 +88,12 @@ const Home = () => {
                             contClassName="col-6"
                             name="apellido3"
                             label="Apellido"
+                            rule={{ required: "Este campo es requerido" }}
+                        />
+                        <InputText
+                            contClassName="col-6"
+                            name="apellido4"
+                            label="Es otro apellido"
                             rule={{ required: "Este campo es requerido" }}
                         />
                         <div className="col-12">

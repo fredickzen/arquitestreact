@@ -1,9 +1,9 @@
 import React from "react";
 import { Spinner } from "react-bootstrap";
 
-const ButtonSubmit = ({ text = "Guardar", loading = false }) => {
+const ButtonSubmit = ({ text = "Guardar", loading = false, color = "primary" }) => {
     return (
-        <button type="submit" className="btn btn-primary" disabled={loading} style={{ marginTop: "30px" }}>
+        <button type="submit" className={"btn btn-" + color} disabled={loading} style={{ marginTop: "30px" }}>
             <Spinner
                 size="sm"
                 animation="border"
