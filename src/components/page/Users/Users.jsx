@@ -1,25 +1,17 @@
-import React, { useState } from "react";
-import { Test } from "../../../js/api/test/test";
-import ButtonAction from "../../controls/buttons/ButtonAction";
+import React from "react";
+import UserButtons from "./partial/UserButtons";
+import UserList from "./partial/userlist/UserList";
 
 const Users = () => {
-    const [loading, setLoading] = useState(false);
-    const callApi = async () => {
-        setLoading(true);
-        Test.llamadoApi()
-            .then((x) => {
-                console.log(x);
-                setLoading(false);
-            })
-            .catch(() => setLoading(false));
-    };
+    const conf = 
+    {
+        titulo: "Otro título"
+    }
+    
     return (
         <div>
-            <ButtonAction
-                onClick={callApi}
-                loading={loading}
-                text="Llamar API sin respuesta"
-            />
+            <UserButtons {...conf}/>
+            <UserList {...conf}/>
         </div>
     );
 };

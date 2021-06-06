@@ -5,23 +5,23 @@ import Users from '../../components/page/Users/Users';
 import RoutingGlobal from './RoutingGlobal';
 
 const RoutingAdmin = () => {
-    return (
-        <MasterPrivate>
-            <RoutingGlobal/>
-            <Route exact path="/about">
-              <About />
-            </Route>
-            <Route exact path="/users">
-              <Users />
-            </Route>
+  return (
+    <MasterPrivate>
+      <RoutingGlobal />
+      <Route exact path="/about">
+        <About />
+      </Route>
+      <Route exact path="/users">
+        <Users />
+      </Route>
 
-          </MasterPrivate>
-    );
+    </MasterPrivate>
+  );
 }
 
 export default RoutingAdmin;
 
 
 function About() {
-    return <h2>About</h2>;
-  }
+  return <h2>About</h2>;
+}
